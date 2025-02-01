@@ -2,9 +2,19 @@ import { render } from '@testing-library/react-native';
 import React from 'react';
 import 'react-native';
 import ProfileScreen from '../src/Profile';
-import { expect, test } from '@jest/globals';
+import { expect, describe , test } from '@jest/globals';
 
-test('Profile Screen Snapshot', () => {
-  const snap = render(<ProfileScreen />).toJSON();
-  expect(snap).toMatchSnapshot();
-});
+
+describe('Profile Test', () => {
+  // test('Profile Screen Snapshot', () => {
+  //   const snap = render(<ProfileScreen title = "Test"/>).toJSON();
+  //   expect(snap).toMatchSnapshot();
+  // });
+
+  test('Profile Screen Props Test', () => {
+    const {getByText} = render(<ProfileScreen title={"Test"}/>)
+    // check the prop passed in rendered correctly
+    expect(getByText('Test')).toBeTruthy();
+  });
+})
+

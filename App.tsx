@@ -25,7 +25,7 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <Home/>
-      <Profile/>
+      <Profile title={'Test'}/>
     </SafeAreaView>
   );
 }

@@ -1,5 +1,6 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import User from './services/api'
 
 const Home = () => {
 
@@ -8,6 +9,10 @@ const Home = () => {
   const incrementCountHandler = () => {
     setCounter((prev) => prev + 1)
   }
+ 
+  // useEffect(() => {
+  //   User.getMovies().then((res) => console.log('Movies', res))
+  // })
 
   return (
     <View style={styles.container}>
@@ -21,8 +26,6 @@ export default Home
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
-        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
     }

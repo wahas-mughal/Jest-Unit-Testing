@@ -5,8 +5,6 @@ exports[`Home Screen Snapshot Home Screen Snapshot 1`] = `
   style={
     {
       "alignItems": "center",
-      "flex": 1,
-      "flexDirection": "row",
       "justifyContent": "center",
     }
   }

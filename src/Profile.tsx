@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({title}) => {
   return (
     <View>
-      <Text>Profile</Text>
+      <Text>{title}</Text>
     </View>
   )
 }
